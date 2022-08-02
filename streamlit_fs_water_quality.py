@@ -25,6 +25,6 @@ prediction = model.predict(df_pred)
 
 if st.button('Prediksi'):
     if(prediction[0] == 0):
-        st.write('<p class="big-font">Air Tidak Layak untuk Diminum.</p>',unsafe_allow_html=True)
-    else:
         st.write('<p class="big-font">Air Layak untuk Diminum.</p>',unsafe_allow_html=True)
+    else:
+        st.write('<p class="big-font">Air Tidak Layak untuk Diminum.</p>',unsafe_allow_html=True)
