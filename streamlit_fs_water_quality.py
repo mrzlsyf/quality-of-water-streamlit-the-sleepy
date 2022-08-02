@@ -1,5 +1,4 @@
 import joblib
-import numpy as np
 import pandas as pd
 import streamlit as st
 
@@ -22,7 +21,7 @@ turbidity = col3.number_input("Masukkan Tingkat Kekeruhan Air")
 df_pred = pd.DataFrame([[ph,hardness,solids,chloramines,sulfate,conductivity,organic,trihalomethanes,turbidity]],
 columns = ['ph','Hardness','Solids','Chloramines','Sulfate','Conductivity','Organic_carbon','Trihalomethanes','Turbidity'])
 
-prediction = model.predict(np.asarray[df_pred])
+prediction = model.predict(df_pred)
 
 if st.button('Prediksi'):
     if(prediction[0] == 0):
